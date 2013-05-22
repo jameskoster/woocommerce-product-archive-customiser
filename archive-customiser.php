@@ -25,7 +25,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	load_plugin_textdomain( 'woocommerce-product-archive-customiser', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 	/**
-	 * New Badge class
+	 * PAC class
 	 **/
 	if ( ! class_exists( 'WC_pac' ) ) {
 
@@ -189,8 +189,8 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 			// Setup styles
 			function wc_pac_styles() {
-				wp_enqueue_style( 'nb-new-styles', plugins_url( '/assets/css/new.css', __FILE__ ) );
-				wp_enqueue_style( 'nb-layout-styles', plugins_url( '/assets/css/layout.css', __FILE__ ) );
+				wp_enqueue_style( 'pac-styles', plugins_url( '/assets/css/pac.css', __FILE__ ) );
+				wp_enqueue_style( 'pac-layout-styles', plugins_url( '/assets/css/layout.css', __FILE__ ) );
 			}
 
 			// Fire customisations!
