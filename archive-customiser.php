@@ -32,7 +32,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 		class WC_pac {
 
 			public function __construct() {
-				add_action( 'wp_enqueue_scripts', array( &$this, 'wc_pac_styles' ) );
+				add_action( 'wp_enqueue_scripts', array( $this, 'wc_pac_styles' ) );
 
 				// Init settings
 				$this->settings = array(
@@ -150,11 +150,11 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 
 				// Admin
-				add_action( 'woocommerce_settings_catalog_options_after', array( &$this, 'admin_settings' ), 20);
-				add_action( 'woocommerce_update_options_catalog', array( &$this, 'save_admin_settings' ) );
-				add_action( 'admin_enqueue_scripts', array( &$this, 'wc_pac_admin_scripts' ) );
-				add_action( 'init', array( &$this, 'wc_pac_fire_customisations' ) );
-				add_action( 'wp', array( &$this, 'wc_pac_columns' ) ); // This doesn't work when hooked into init :(
+				add_action( 'woocommerce_settings_catalog_options_after', array( $this, 'admin_settings' ), 20);
+				add_action( 'woocommerce_update_options_catalog', array( $this, 'save_admin_settings' ) );
+				add_action( 'admin_enqueue_scripts', array( $this, 'wc_pac_admin_scripts' ) );
+				add_action( 'init', array( $this, 'wc_pac_fire_customisations' ) );
+				add_action( 'wp', array( $this, 'wc_pac_columns' ) ); // This doesn't work when hooked into init :(
 
 			}
 
@@ -197,7 +197,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			function wc_pac_fire_customisations() {
 
 				// Products per page
-				add_filter( 'loop_shop_per_page', array( &$this, 'woocommerce_pac_products_per_page' ), 20 );
+				add_filter( 'loop_shop_per_page', array( $this, 'woocommerce_pac_products_per_page' ), 20 );
 
 				// Sale flash
 				if ( get_option( 'wc_pac_sale_flash' ) == 'no' ) {
@@ -236,17 +236,17 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				// New Badge
 				if ( get_option( 'wc_pac_new_badge' ) == 'yes' ) {
-					add_action( 'woocommerce_before_shop_loop_item_title', array( &$this, 'woocommerce_pac_show_product_loop_new_badge' ), 30 );
+					add_action( 'woocommerce_before_shop_loop_item_title', array( $this, 'woocommerce_pac_show_product_loop_new_badge' ), 30 );
 				}
 
 				// Stock
 				if ( get_option( 'wc_pac_stock' ) == 'yes' ) {
-					add_action( 'woocommerce_after_shop_loop_item', array( &$this, 'woocommerce_pac_show_product_stock' ), 30 );
+					add_action( 'woocommerce_after_shop_loop_item', array( $this, 'woocommerce_pac_show_product_stock' ), 30 );
 				}
 
 				// Categories
 				if ( get_option( 'wc_pac_categories' ) == 'yes' ) {
-					add_action( 'woocommerce_after_shop_loop_item', array( &$this, 'woocommerce_pac_show_product_categories' ), 30 );
+					add_action( 'woocommerce_after_shop_loop_item', array( $this, 'woocommerce_pac_show_product_categories' ), 30 );
 				}
 			}
 
@@ -254,8 +254,8 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			function wc_pac_columns() {
 				// Product columns
 				if ( is_shop() || is_product_category() || is_product_tag() ) {
-					add_filter( 'body_class', array( &$this, 'woocommerce_pac_columns' ) );
-					add_filter( 'loop_shop_columns', array( &$this, 'woocommerce_pac_products_row' ) );
+					add_filter( 'body_class', array( $this, 'woocommerce_pac_columns' ) );
+					add_filter( 'loop_shop_columns', array( $this, 'woocommerce_pac_products_row' ) );
 				}
 			}
 

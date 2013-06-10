@@ -52,6 +52,7 @@ function remove_pac_styles() {
 = 0.1.1  - 10/06/2013 =
 * Product column settings now affect product categories & tags
 * Product categories display inline for better theme compatibility
+* Stripped object pass by reference
 
 = 0.1 =
 Initial release.
