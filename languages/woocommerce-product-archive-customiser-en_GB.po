@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Product Archive Customiser v0.1\n"
+"Project-Id-Version: WooCommerce Product Archive Customiser v0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-05-17 20:19:44+0000\n"
+"PO-Revision-Date: 2013-11-28 14:15:47+0000\n"
 "Last-Translator: admin <james@jameskoster.co.uk>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -47,12 +47,6 @@ msgstr ""
 #: archive-customiser.php:0
 #@ woocommerce-product-archive-customiser
 msgid "http://jameskoster.co.uk"
-msgstr ""
-
-#. translators: plugin header field 'Version'
-#: archive-customiser.php:0
-#@ woocommerce-product-archive-customiser
-msgid "0.1"
 msgstr ""
 
 #: archive-customiser.php:40
@@ -115,73 +109,84 @@ msgstr ""
 msgid "Product Count"
 msgstr ""
 
-#: archive-customiser.php:73
+#: archive-customiser.php:79
 #@ woocommerce-product-archive-customiser
 msgid "Product Sorting"
 msgstr ""
 
-#: archive-customiser.php:79
+#: archive-customiser.php:85
 #@ woocommerce-product-archive-customiser
 msgid "Sale Flashes"
 msgstr ""
 
-#: archive-customiser.php:85
+#: archive-customiser.php:91
 #@ woocommerce-product-archive-customiser
 msgid "Add to cart buttons"
 msgstr ""
 
-#: archive-customiser.php:91
+#: archive-customiser.php:97
 #@ woocommerce-product-archive-customiser
 msgid "Thumbnails"
 msgstr ""
 
-#: archive-customiser.php:97
+#: archive-customiser.php:103
 #@ woocommerce-product-archive-customiser
 msgid "Prices"
 msgstr ""
 
-#: archive-customiser.php:103
+#: archive-customiser.php:109
 #@ woocommerce-product-archive-customiser
 msgid "Ratings"
 msgstr ""
 
-#: archive-customiser.php:109
+#: archive-customiser.php:115
 #@ woocommerce-product-archive-customiser
 msgid "Product categories"
 msgstr ""
 
-#: archive-customiser.php:115
+#: archive-customiser.php:121
 #@ woocommerce-product-archive-customiser
 msgid "Stock"
 msgstr ""
 
-#: archive-customiser.php:121
+#: archive-customiser.php:127
 #@ woocommerce-product-archive-customiser
 msgid "\"New\" badges"
 msgstr ""
 
-#: archive-customiser.php:127
+#: archive-customiser.php:133
 #@ woocommerce-product-archive-customiser
 msgid "Display the \"New\" badge for how many days?"
 msgstr ""
 
-#: archive-customiser.php:180
+#: archive-customiser.php:187
 #@ woocommerce
 msgid "WooCommerce"
 msgstr ""
 
-#: archive-customiser.php:292
+#: archive-customiser.php:333
 #@ woocommerce-product-archive-customiser
 msgid "New"
 msgstr ""
 
-#: archive-customiser.php:306
+#: archive-customiser.php:347
 #@ woothemes
 msgid "Out of stock"
 msgstr ""
 
-#: archive-customiser.php:308
+#: archive-customiser.php:349
 #@ woothemes
 msgid " In stock"
+msgstr ""
+
+#. translators: plugin header field 'Version'
+#: archive-customiser.php:0
+#@ woocommerce-product-archive-customiser
+msgid "0.2.0"
+msgstr ""
+
+#: archive-customiser.php:73
+#@ woocommerce-product-archive-customiser
+msgid "Per Page Dropdown"
 msgstr ""
 
