@@ -49,6 +49,9 @@ function remove_pac_styles() {
 
 == Changelog ==
 
+= 0.2.0  - 28/11/2013 =
+* Added option for user to choose how many products to display per page. Kudos @spmlucas.
+
 = 0.1.1  - 10/06/2013 =
 * Product column settings now affect product categories & tags
 * Product categories display inline for better theme compatibility
