@@ -2,8 +2,8 @@
 Contributors: jameskoster
 Tags: woocommerce, ecommerce, products
 Requires at least: 3.5
-Tested up to: 3.8-b1
-Stable tag: 0.2.0
+Tested up to: 3.8.1
+Stable tag: 0.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,9 @@ function remove_pac_styles() {
 2. An example product archive with everything enabled.
 
 == Changelog ==
+
+= 0.3.0  - 04/03/2014 =
+* WooCommerce 2.1 compatibility.
 
 = 0.2.0  - 28/11/2013 =
 * Added option for user to choose how many products to display per page. Kudos @spmlucas.
