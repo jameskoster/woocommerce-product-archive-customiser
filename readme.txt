@@ -19,7 +19,7 @@ Please feel free to contribute on <a href="https://github.com/jameskoster/woocom
 
 1. Upload `woocommerce-product-archive-customiser` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Configure the options on the Catalog tab of the WooCommerce settings screen.
+3. Configure the options on the Products tab of the WooCommerce settings screen.
 3. Done!
 
 == Frequently Asked Questions ==
@@ -49,7 +49,7 @@ function remove_pac_styles() {
 
 == Changelog ==
 
-= 0.3.0  - 04/03/2014 =
+= 0.3.0  - 04/02/2014 =
 * WooCommerce 2.1 compatibility.
 
 = 0.2.0  - 28/11/2013 =
