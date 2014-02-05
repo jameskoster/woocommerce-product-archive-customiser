@@ -51,6 +51,7 @@ function remove_pac_styles() {
 
 = 0.3.0  - 04/02/2014 =
 * WooCommerce 2.1 compatibility.
+* Fixed a notice when using the products per page selector feature.
 
 = 0.2.0  - 28/11/2013 =
 * Added option for user to choose how many products to display per page. Kudos @spmlucas.

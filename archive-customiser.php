@@ -198,7 +198,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			// Setup styles
 			function wc_pac_styles() {
 				wp_enqueue_style( 'pac-styles', plugins_url( '/assets/css/pac.css', __FILE__ ) );
-				wp_enqueue_style( 'pac-layout-styles', plugins_url( '/assets/css/layout.css', __FILE__ ) );
+				wp_enqueue_style( 'pac-layout-styles', plugins_url( '/assets/css/layout.css', __FILE__ ), '', '', 'only screen and (min-width: ' . apply_filters( 'woocommerce_style_smallscreen_breakpoint', $breakpoint = '768px' ) . ')' );
 			}
 
 			// Fire customisations!
@@ -292,8 +292,16 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 			// Per Page Dropdown
 			function woocommerce_pac_show_product_perpage() {
-				$per_page 		= get_option( 'wc_pac_products_per_page' );
-				$woo_per_page	= ( isset( $_REQUEST['per_page'] ) ) ? $_REQUEST['per_page'] : $_COOKIE['per_page'];
+				$per_page = get_option( 'wc_pac_products_per_page' );
+
+				if ( isset( $_REQUEST['per_page'] ) ) {
+					$woo_per_page = $_REQUEST['per_page'];
+				} elseif ( ! isset( $_REQUEST['per_page'] ) && isset( $_COOKIE['per_page'] ) ) {
+					$woo_per_page = $_COOKIE['per_page'];
+				} else {
+					$woo_per_page = $per_page;
+				}
+
 				?>
 				<form class="woocommerce-ordering" method="post">
 					<select name="per_page" class="per_page" onchange="this.form.submit()">
