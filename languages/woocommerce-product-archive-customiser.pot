@@ -1,0 +1,121 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/woocommerce-product-archive-customiser\n"
+"POT-Creation-Date: 2014-05-15 10:36:50+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: archive-customiser.php:40
+msgid "Product Archives"
+msgstr ""
+
+#: archive-customiser.php:41
+msgid "Toggle the display of various components on product archives and change product layout."
+msgstr ""
+
+#: archive-customiser.php:46
+msgid "Product Columns"
+msgstr ""
+
+#: archive-customiser.php:47
+msgid "The number of columns that products are arranged in to on archives"
+msgstr ""
+
+#: archive-customiser.php:52
+msgid "2"
+msgstr ""
+
+#: archive-customiser.php:53
+msgid "3"
+msgstr ""
+
+#: archive-customiser.php:54
+msgid "4"
+msgstr ""
+
+#: archive-customiser.php:55
+msgid "5"
+msgstr ""
+
+#: archive-customiser.php:59
+msgid "Products per page"
+msgstr ""
+
+#: archive-customiser.php:60
+msgid "The number of products displayed per page"
+msgstr ""
+
+#: archive-customiser.php:66
+msgid "Display"
+msgstr ""
+
+#: archive-customiser.php:67
+msgid "Product Count"
+msgstr ""
+
+#: archive-customiser.php:73
+msgid "Per Page Dropdown"
+msgstr ""
+
+#: archive-customiser.php:79
+msgid "Product Sorting"
+msgstr ""
+
+#: archive-customiser.php:85
+msgid "Sale Flashes"
+msgstr ""
+
+#: archive-customiser.php:91
+msgid "Add to cart buttons"
+msgstr ""
+
+#: archive-customiser.php:97
+msgid "Thumbnails"
+msgstr ""
+
+#: archive-customiser.php:103
+msgid "Prices"
+msgstr ""
+
+#: archive-customiser.php:109
+msgid "Ratings"
+msgstr ""
+
+#: archive-customiser.php:115
+msgid "Product categories"
+msgstr ""
+
+#: archive-customiser.php:121
+msgid "Stock"
+msgstr ""
+
+#: archive-customiser.php:127
+msgid "\"New\" badges"
+msgstr ""
+
+#: archive-customiser.php:133
+msgid "Display the \"New\" badge for how many days?"
+msgstr ""
+
+#: archive-customiser.php:188
+msgid "WooCommerce"
+msgstr ""
+
+#: archive-customiser.php:342
+msgid "New"
+msgstr ""
+
+#: archive-customiser.php:356
+msgid "Out of stock"
+msgstr ""
+
+#: archive-customiser.php:358
+msgid " In stock"
+msgstr ""
