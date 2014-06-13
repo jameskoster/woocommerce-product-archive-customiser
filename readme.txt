@@ -2,7 +2,7 @@
 Contributors: jameskoster
 Tags: woocommerce, ecommerce, products
 Requires at least: 3.5
-Tested up to: 3.8.1
+Tested up to: 3.9.1
 Stable tag: 0.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -49,7 +49,8 @@ function remove_pac_styles() {
 
 == Changelog ==
 
-= 0.4.0 - 15/05/2014 =
+= 0.4.0 - 13/06/2014 =
+* Fix - Rating option
 * Localization - Added .pot.
 
 = 0.3.0  - 04/02/2014 =
