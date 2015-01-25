@@ -334,7 +334,8 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 			// Display the new badge
 			function woocommerce_pac_show_product_loop_new_badge() {
-				$postdate 		= get_the_time( 'Y-m-d' );			// Post date
+				global $product;
+                $postdate       = get_the_time( 'Y-m-d', $product->id  );
 				$postdatestamp 	= strtotime( $postdate );			// Timestamped post date
 				$newness 		= get_option( 'wc_pac_newness' ); 	// Newness in days as defined by option
 
