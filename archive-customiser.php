@@ -334,7 +334,8 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 			// Display the new badge
 			function woocommerce_pac_show_product_loop_new_badge() {
-				$postdate 		= get_the_time( 'Y-m-d' );			// Post date
+				global $product;
+                $postdate       = get_the_time( 'Y-m-d', $product->id  );
 				$postdatestamp 	= strtotime( $postdate );			// Timestamped post date
 				$newness 		= get_option( 'wc_pac_newness' ); 	// Newness in days as defined by option
 
@@ -344,10 +345,10 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			}
 
 			function woocommerce_pac_show_product_categories() {
-				global $post;
-				$terms_as_links = get_the_term_list( $post->ID, 'product_cat', '', ', ', '' );
-				echo '<p><small class="categories">' . $terms_as_links . '</small></p>';
-			}
+                global $product;
+                $terms_as_links = get_the_term_list( $product->id, 'product_cat', '', ', ', '' );
+                echo '<p><small class="categories">' . $terms_as_links . '</small></p>';
+            }
 
 			function woocommerce_pac_show_product_stock() {
 				global $product;
