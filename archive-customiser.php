@@ -339,14 +339,14 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				$newness 		= get_option( 'wc_pac_newness' ); 	// Newness in days as defined by option
 
 				if ( ( time() - ( 60 * 60 * 24 * $newness ) ) < $postdatestamp ) { // If the product was published within the newness time frame display the new badge
-					echo '<p><span class="wc-new-badge">' . __( 'New', 'woocommerce-product-archive-customiser' ) . '</span></p>';
+					echo '<p class="wc-new-badge"><span>' . __( 'New', 'woocommerce-product-archive-customiser' ) . '</span></p>';
 				}
 			}
 
 			function woocommerce_pac_show_product_categories() {
 				global $post;
 				$terms_as_links = get_the_term_list( $post->ID, 'product_cat', '', ', ', '' );
-				echo '<p><small class="categories">' . $terms_as_links . '</small></p>';
+				echo '<p class="categories"><small>' . $terms_as_links . '</small></p>';
 			}
 
 			function woocommerce_pac_show_product_stock() {
