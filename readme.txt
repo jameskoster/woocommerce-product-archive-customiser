@@ -2,8 +2,8 @@
 Contributors: jameskoster
 Tags: woocommerce, ecommerce, products
 Requires at least: 3.5
-Tested up to: 3.9.1
-Stable tag: 0.4.0
+Tested up to: 4.1
+Stable tag: 0.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,10 @@ function remove_pac_styles() {
 2. An example product archive with everything enabled.
 
 == Changelog ==
+
+= 0.5.0 - 30/01/2015 =
+* Tweak - CSS classes for new badge / categories moved to parent element. Props emirpprime
+* Tweak - Fixed potential 'page not found' errors when using the products per page selector feature. Props billras
 
 = 0.4.0 - 13/06/2014 =
 * Fix - Rating option
