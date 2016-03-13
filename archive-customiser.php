@@ -373,7 +373,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 	if ( ! $product->is_in_stock() ) {
 			 		echo '<p class="stock out-of-stock"><small>' . __( 'Out of stock', 'woothemes' ) . '</small></p>';
 			 	} elseif ( $stock > 1 ) {
-			 		echo '<p class="stock in-stock"><small>' . $stock . __( ' In stock', 'woothemes' ) . '</small></p>';
+			 		echo '<p class="stock in-stock"><small>' . sprintf( __( '%d in stock', 'woothemes' ), $stock ) . '</small></p>';
 			 	}
 			}
 		}
