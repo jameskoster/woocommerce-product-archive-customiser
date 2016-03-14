@@ -3,7 +3,7 @@ Contributors: jameskoster
 Tags: woocommerce, ecommerce, products
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 0.5.0
+Stable tag: 0.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,9 @@ function remove_pac_styles() {
 2. An example product archive with everything enabled.
 
 == Changelog ==
+
+= 0.5.1 - 13/03/2016 =
+* Tweat - Change formating of "in stock" message to use php formatting instead of concatenation.
 
 = 0.5.0 - 30/01/2015 =
 * Tweak - CSS classes for new badge / categories moved to parent element. Props emirpprime

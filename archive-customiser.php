@@ -371,9 +371,9 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				global $product;
 				$stock = $product->get_total_stock();
 			 	if ( ! $product->is_in_stock() ) {
-			 		echo '<p class="stock out-of-stock"><small>' . __( 'Out of stock', 'woothemes' ) . '</small></p>';
+			 		echo '<p class="stock out-of-stock"><small>' . __( 'Out of stock', 'woocommerce' ) . '</small></p>';
 			 	} elseif ( $stock > 1 ) {
-			 		echo '<p class="stock in-stock"><small>' . $stock . __( ' In stock', 'woothemes' ) . '</small></p>';
+			 		echo '<p class="stock in-stock"><small>' . sprintf( __( '%s in stock', 'woocommerce' ), $stock ) . '</small></p>';
 			 	}
 			}
 		}
