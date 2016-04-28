@@ -1,124 +1,106 @@
-# Copyright (C) 2014-2016
-# This file is distributed under the same license as the  package.
+# Copyright (C) 2016 WooCommerce Product Archive Customiser
+# This file is distributed under the same license as the WooCommerce Product Archive Customiser package.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/woocommerce-product-archive-customiser\n"
-"POT-Creation-Date: 2014-05-15 10:36:50+00:00\n"
-"PO-Revision-Date: 2016-03-13 22:00+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Project-Id-Version: WooCommerce Product Archive Customiser 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-"
+"product-archive-customiser\n"
+"POT-Creation-Date: 2016-04-28 12:29:00+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: archive-customiser.php:40
+#: woocommerce-product-archive-customiser.php:211
 msgid "Product Archives"
 msgstr ""
 
-#: archive-customiser.php:41
-msgid ""
-"Toggle the display of various components on product archives and change "
-"product layout."
+#: woocommerce-product-archive-customiser.php:225
+msgid "Product columns"
 msgstr ""
 
-#: archive-customiser.php:46
-msgid "Product Columns"
-msgstr ""
-
-#: archive-customiser.php:47
-msgid "The number of columns that products are arranged in to on archives"
-msgstr ""
-
-#: archive-customiser.php:52
-msgid "2"
-msgstr ""
-
-#: archive-customiser.php:53
-msgid "3"
-msgstr ""
-
-#: archive-customiser.php:54
-msgid "4"
-msgstr ""
-
-#: archive-customiser.php:55
-msgid "5"
-msgstr ""
-
-#: archive-customiser.php:59
+#: woocommerce-product-archive-customiser.php:247
 msgid "Products per page"
 msgstr ""
 
-#: archive-customiser.php:60
-msgid "The number of products displayed per page"
+#: woocommerce-product-archive-customiser.php:288
+msgid "Display product count"
 msgstr ""
 
-#: archive-customiser.php:66
-msgid "Display"
+#: woocommerce-product-archive-customiser.php:304
+msgid "Display product sorting"
 msgstr ""
 
-#: archive-customiser.php:67
-msgid "Product Count"
+#: woocommerce-product-archive-customiser.php:320
+msgid "Display sale flashes"
 msgstr ""
 
-#: archive-customiser.php:73
-msgid "Per Page Dropdown"
+#: woocommerce-product-archive-customiser.php:336
+msgid "Display add to cart buttons"
 msgstr ""
 
-#: archive-customiser.php:79
-msgid "Product Sorting"
+#: woocommerce-product-archive-customiser.php:352
+msgid "Display product image"
 msgstr ""
 
-#: archive-customiser.php:85
-msgid "Sale Flashes"
+#: woocommerce-product-archive-customiser.php:368
+msgid "Display prices"
 msgstr ""
 
-#: archive-customiser.php:91
-msgid "Add to cart buttons"
+#: woocommerce-product-archive-customiser.php:384
+msgid "Display ratings"
 msgstr ""
 
-#: archive-customiser.php:97
-msgid "Thumbnails"
+#: woocommerce-product-archive-customiser.php:400
+msgid "Display new badge"
 msgstr ""
 
-#: archive-customiser.php:103
-msgid "Prices"
+#: woocommerce-product-archive-customiser.php:416
+msgid "Display the \"New\" badge for how many days"
 msgstr ""
 
-#: archive-customiser.php:109
-msgid "Ratings"
+#: woocommerce-product-archive-customiser.php:439
+msgid "Display categories"
 msgstr ""
 
-#: archive-customiser.php:115
-msgid "Product categories"
+#: woocommerce-product-archive-customiser.php:455
+msgid "Display stock"
 msgstr ""
 
-#: archive-customiser.php:121
-msgid "Stock"
-msgstr ""
-
-#: archive-customiser.php:127
-msgid "\"New\" badges"
-msgstr ""
-
-#: archive-customiser.php:133
-msgid "Display the \"New\" badge for how many days?"
-msgstr ""
-
-#: archive-customiser.php:188
-msgid "WooCommerce"
-msgstr ""
-
-#: archive-customiser.php:360
+#: woocommerce-product-archive-customiser.php:632
 msgid "New"
 msgstr ""
 
-#: archive-customiser.php:374
+#: woocommerce-product-archive-customiser.php:656
 msgid "Out of stock"
 msgstr ""
 
-#: archive-customiser.php:376
-msgid "%d in stock"
+#: woocommerce-product-archive-customiser.php:658
+msgid "%s in stock"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Product Archive Customiser"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://jameskoster.co.uk/tag/product-archive-customiser/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Allows you to customise WooCommerce product archives. Change the number of "
+"product columns and the number of products displayed per page. Toggle the "
+"display of core elements and enable some that are not included in "
+"WooCommerce core such as stock levels and product categories."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "jameskoster"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://jameskoster.co.uk"
 msgstr ""
