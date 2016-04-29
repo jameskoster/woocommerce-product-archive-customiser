@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WooCommerce Product Archive Customiser
  * Plugin URI: http://jameskoster.co.uk/tag/product-archive-customiser/
- * Version: 1.0.0
+ * Version: 1.0.1
  * Description: Allows you to customise WooCommerce product archives. Change the number of product columns and the number of products displayed per page. Toggle the display of core elements and enable some that are not included in WooCommerce core such as stock levels and product categories.
  * Author: jameskoster
  * Tested up to: 4.5.1
@@ -48,15 +48,16 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * The constructor!
 			 */
 			public function __construct() {
-				$this->version = '1.0.0';
+				$this->version = '1.0.1';
 
 				add_action( 'wp_enqueue_scripts', array( $this, 'wc_pac_styles' ) );
 				add_action( 'init', array( $this, 'wc_pac_setup' ) );
 				add_action( 'wp', array( $this, 'wc_pac_fire_customisations' ) );
 				add_action( 'wp', array( $this, 'wc_pac_columns' ) );
+				add_filter( 'loop_shop_per_page', array( $this, 'woocommerce_pac_products_per_page' ), 20 );
 
 				// Upgrade script.
-				if ( '1.0.0' === $this->version ) {
+				if ( version_compare( $this->version, '1.0.0' ) >= 0 ) {
 					add_action( 'plugins_loaded', array( $this, 'update_settings' ) );
 				}
 			}
@@ -516,10 +517,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * @return void
 			 */
 			function wc_pac_fire_customisations() {
-
-				// Products per page.
-				add_filter( 'loop_shop_per_page', array( $this, 'woocommerce_pac_products_per_page' ), 20 );
-
 				// Sale flash.
 				if ( get_theme_mod( 'wc_pac_sale_flash' ) === false ) {
 					remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
@@ -614,6 +611,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 */
 			function woocommerce_pac_products_row() {
 				$columns = get_theme_mod( 'wc_pac_columns' );
+
 				return $columns;
 			}
 

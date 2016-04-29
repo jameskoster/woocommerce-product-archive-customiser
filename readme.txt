@@ -49,6 +49,9 @@ function remove_pac_styles() {
 
 == Changelog ==
 
+= 1.0.1 - 29/04/2016 =
+* Fix - Products per page setting.
+
 = 1.0.0 - 28/04/2016 =
 * New - All settings have been moved to the Customizer. Old settings should be automatically imported.
 * Tweak - Complete code tidy / removal of unused assets.
