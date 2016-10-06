@@ -51,6 +51,7 @@ function remove_pac_styles() {
 
 = 1.0.2 - 06/10/2016 =
 * Fix - Specify a default for Customizer settings.
+* Fix - More explicit css for column layout.
 
 = 1.0.1 - 29/04/2016 =
 * Fix - Products per page setting.
