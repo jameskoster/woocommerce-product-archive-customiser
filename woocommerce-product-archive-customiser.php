@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: WooCommerce Product Archive Customiser
- * Plugin URI: http://jameskoster.co.uk/tag/product-archive-customiser/
- * Version: 1.0.1
+ * Plugin URI: https://wordpress.org/plugins/woocommerce-product-archive-customiser/
+ * Version: 1.0.2
  * Description: Allows you to customise WooCommerce product archives. Change the number of product columns and the number of products displayed per page. Toggle the display of core elements and enable some that are not included in WooCommerce core such as stock levels and product categories.
  * Author: jameskoster
- * Tested up to: 4.5.1
+ * Tested up to: 4.6.1
  * Author URI: http://jameskoster.co.uk
  * Text Domain: woocommerce-product-archive-customiser
  * Domain Path: /languages/
@@ -518,52 +518,52 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 */
 			function wc_pac_fire_customisations() {
 				// Sale flash.
-				if ( get_theme_mod( 'wc_pac_sale_flash' ) === false ) {
+				if ( get_theme_mod( 'wc_pac_sale_flash', false ) === false ) {
 					remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
 				}
 
 				// Result Count.
-				if ( get_theme_mod( 'wc_pac_product_count' ) === false ) {
+				if ( get_theme_mod( 'wc_pac_product_count', true ) === false ) {
 					remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 				}
 
 				// Product Ordering.
-				if ( get_theme_mod( 'wc_pac_product_sorting' ) === false ) {
+				if ( get_theme_mod( 'wc_pac_product_sorting', true ) === false ) {
 					remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 				}
 
 				// Add to cart button.
-				if ( get_theme_mod( 'wc_pac_add_to_cart' ) === false ) {
+				if ( get_theme_mod( 'wc_pac_add_to_cart', true ) === false ) {
 					remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 				}
 
 				// Thumbnail.
-				if ( get_theme_mod( 'wc_pac_thumbnail' ) === false ) {
+				if ( get_theme_mod( 'wc_pac_thumbnail', true ) === false ) {
 					remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
 				}
 
 				// Price.
-				if ( get_theme_mod( 'wc_pac_price' ) === false ) {
+				if ( get_theme_mod( 'wc_pac_price', true ) === false ) {
 					remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
 				}
 
 				// Rating.
-				if ( get_theme_mod( 'wc_pac_rating' ) === false ) {
+				if ( get_theme_mod( 'wc_pac_rating', true ) === false ) {
 					remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
 				}
 
 				// New Badge.
-				if ( get_theme_mod( 'wc_pac_new_badge' ) === true ) {
+				if ( get_theme_mod( 'wc_pac_new_badge', false ) === true ) {
 					add_action( 'woocommerce_before_shop_loop_item_title', array( $this, 'woocommerce_pac_show_product_loop_new_badge' ), 30 );
 				}
 
 				// Stock.
-				if ( get_theme_mod( 'wc_pac_stock' ) === true ) {
+				if ( get_theme_mod( 'wc_pac_stock', false ) === true ) {
 					add_action( 'woocommerce_after_shop_loop_item', array( $this, 'woocommerce_pac_show_product_stock' ), 30 );
 				}
 
 				// Categories.
-				if ( get_theme_mod( 'wc_pac_categories' ) === true ) {
+				if ( get_theme_mod( 'wc_pac_categories', false ) === true ) {
 					add_action( 'woocommerce_after_shop_loop_item', array( $this, 'woocommerce_pac_show_product_categories' ), 30 );
 				}
 			}
@@ -587,7 +587,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * @return string per page cookie
 			 */
 			function woocommerce_pac_products_per_page() {
-				$per_page = get_theme_mod( 'wc_pac_products_per_page' );
+				$per_page = get_theme_mod( 'wc_pac_products_per_page', 10 );
 
 				return $per_page;
 			}
@@ -599,7 +599,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * @return array          new body classes
 			 */
 			function woocommerce_pac_columns( $classes ) {
-				$columns   = get_theme_mod( 'wc_pac_columns' );
+				$columns   = get_theme_mod( 'wc_pac_columns', 4 );
 				$classes[] = 'product-columns-' . $columns;
 				return $classes;
 			}
@@ -610,7 +610,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * @return int product columns
 			 */
 			function woocommerce_pac_products_row() {
-				$columns = get_theme_mod( 'wc_pac_columns' );
+				$columns = get_theme_mod( 'wc_pac_columns', 4 );
 
 				return $columns;
 			}
@@ -623,7 +623,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			function woocommerce_pac_show_product_loop_new_badge() {
 				$postdate 		= get_the_time( 'Y-m-d' );			 // Post date.
 				$postdatestamp 	= strtotime( $postdate );			 // Timestamped post date.
-				$newness 		= get_theme_mod( 'wc_pac_newness' ); // Newness in days as defined by option.
+				$newness 		= get_theme_mod( 'wc_pac_newness', 7 ); // Newness in days as defined by option.
 
 				// If the product was published within the newness time frame display the new badge.
 				if ( ( time() - ( 60 * 60 * 24 * $newness ) ) < $postdatestamp ) {

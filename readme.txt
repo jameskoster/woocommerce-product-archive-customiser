@@ -2,8 +2,8 @@
 Contributors: jameskoster
 Tags: woocommerce, ecommerce, products
 Requires at least: 4.4
-Tested up to: 4.5.1
-Stable tag: 1.0.1
+Tested up to: 4.6.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,9 @@ function remove_pac_styles() {
 2. An example product archive with everything enabled.
 
 == Changelog ==
+
+= 1.0.2 - 06/10/2016 =
+* Fix - Specify a default for Customizer settings.
 
 = 1.0.1 - 29/04/2016 =
 * Fix - Products per page setting.
