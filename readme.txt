@@ -51,6 +51,7 @@ function remove_pac_styles() {
 
 = 1.0.3 - 13/10/2016 =
 * Fix - Column layout
+* Fix - Stock quantities of 1 are now displayed.
 
 = 1.0.2 - 06/10/2016 =
 * Fix - Specify a default for Customizer settings.
