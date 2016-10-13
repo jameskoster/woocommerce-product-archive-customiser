@@ -3,7 +3,7 @@ Contributors: jameskoster
 Tags: woocommerce, ecommerce, products
 Requires at least: 4.4
 Tested up to: 4.6.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,9 @@ function remove_pac_styles() {
 2. An example product archive with everything enabled.
 
 == Changelog ==
+
+= 1.0.3 - 13/10/2016 =
+* Fix - Column layout
 
 = 1.0.2 - 06/10/2016 =
 * Fix - Specify a default for Customizer settings.

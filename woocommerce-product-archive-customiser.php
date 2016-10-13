@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WooCommerce Product Archive Customiser
  * Plugin URI: https://wordpress.org/plugins/woocommerce-product-archive-customiser/
- * Version: 1.0.2
+ * Version: 1.0.3
  * Description: Allows you to customise WooCommerce product archives. Change the number of product columns and the number of products displayed per page. Toggle the display of core elements and enable some that are not included in WooCommerce core such as stock levels and product categories.
  * Author: jameskoster
  * Tested up to: 4.6.1
@@ -48,7 +48,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * The constructor!
 			 */
 			public function __construct() {
-				$this->version = '1.0.1';
+				$this->version = '1.0.3';
 
 				add_action( 'wp_enqueue_scripts', array( $this, 'wc_pac_styles' ) );
 				add_action( 'init', array( $this, 'wc_pac_setup' ) );
