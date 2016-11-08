@@ -585,37 +585,37 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				// Sale flash.
 				if ( get_theme_mod( 'wc_pac_sale_flash', false ) === false ) {
-					$wc_pac_body_classes[] = 'wc_pac_hide_sale_flash';
+					$wc_pac_body_classes[] = 'wc-pac-hide-sale-flash';
 				}
 
 				// Result Count.
 				if ( get_theme_mod( 'wc_pac_product_count', true ) === false ) {
-					$wc_pac_body_classes[] = 'wc_pac_hide_product_count';
+					$wc_pac_body_classes[] = 'wc-pac-hide-product-count';
 				}
 
 				// Product Ordering.
 				if ( get_theme_mod( 'wc_pac_product_sorting', true ) === false ) {
-					$wc_pac_body_classes[] = 'wc_pac_hide_product_sorting';
+					$wc_pac_body_classes[] = 'wc-pac-hide-product-sorting';
 				}
 
 				// Add to cart button.
 				if ( get_theme_mod( 'wc_pac_add_to_cart', true ) === false ) {
-					$wc_pac_body_classes[] = 'wc_pac_hide_add_to_cart';
+					$wc_pac_body_classes[] = 'wc-pac-hide-add-to-cart';
 				}
 
 				// Thumbnail.
 				if ( get_theme_mod( 'wc_pac_thumbnail', true ) === false ) {
-					$wc_pac_body_classes[] = 'wc_pac_hide_thumbnail';
+					$wc_pac_body_classes[] = 'wc-pac-hide-thumbnail';
 				}
 
 				// Price.
 				if ( get_theme_mod( 'wc_pac_price', true ) === false ) {
-					$wc_pac_body_classes[] = 'wc_pac_hide_price';
+					$wc_pac_body_classes[] = 'wc-pac-hide-price';
 				}
 
 				// Rating.
 				if ( get_theme_mod( 'wc_pac_rating', true ) === false ) {
-					$wc_pac_body_classes[] = 'wc_pac_hide_rating';
+					$wc_pac_body_classes[] = 'wc-pac-hide-rating';
 				}
 
 				// Add the body classes to the body

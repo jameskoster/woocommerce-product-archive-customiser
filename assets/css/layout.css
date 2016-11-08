@@ -34,13 +34,12 @@
 .woocommerce-page.product-columns-5 ul.products li.product.last {
   margin-right: 0;
 }
-
-.woocommerce.post-type-archive-product.wc_pac_hide_sale_flash .product .onsale,
-.woocommerce.post-type-archive-product.wc_pac_hide_product_count .woocommerce-result-count,
-.woocommerce.post-type-archive-product.wc_pac_hide_product_sorting .woocommerce-ordering,
-.woocommerce.post-type-archive-product.wc_pac_hide_add_to_cart .product .add_to_cart_button,
-.woocommerce.post-type-archive-product.wc_pac_hide_thumbnail .product .wp-post-image,
-.woocommerce.post-type-archive-product.wc_pac_hide_price .product .price,
-.woocommerce.post-type-archive-product.wc_pac_hide_rating .product .star-rating {
+.woocommerce.post-type-archive-product.wc-pac-hide-sale-flash .product .onsale,
+.woocommerce.post-type-archive-product.wc-pac-hide-product-count .woocommerce-result-count,
+.woocommerce.post-type-archive-product.wc-pac-hide-product-sorting .woocommerce-ordering,
+.woocommerce.post-type-archive-product.wc-pac-hide-add-to-cart .product .add_to_cart_button,
+.woocommerce.post-type-archive-product.wc-pac-hide-thumbnail .product .wp-post-image,
+.woocommerce.post-type-archive-product.wc-pac-hide-price .product .price,
+.woocommerce.post-type-archive-product.wc-pac-hide-rating .product .star-rating {
   display: none;
 }
