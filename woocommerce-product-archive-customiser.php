@@ -53,6 +53,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				add_action( 'wp_enqueue_scripts', array( $this, 'wc_pac_styles' ) );
 				add_action( 'init', array( $this, 'wc_pac_setup' ) );
 				add_action( 'wp', array( $this, 'wc_pac_fire_customisations' ) );
+				add_filter( 'body_class', array( $this, 'wc_pac_fire_customisation_styles' ) );
 				add_action( 'wp', array( $this, 'wc_pac_columns' ) );
 				add_filter( 'loop_shop_per_page', array( $this, 'woocommerce_pac_products_per_page' ), 20 );
 
@@ -517,6 +518,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * @return void
 			 */
 			function wc_pac_fire_customisations() {
+
 				// Sale flash.
 				if ( get_theme_mod( 'wc_pac_sale_flash', false ) === false ) {
 					remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
@@ -566,6 +568,58 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				if ( get_theme_mod( 'wc_pac_categories', false ) === true ) {
 					add_action( 'woocommerce_after_shop_loop_item', array( $this, 'woocommerce_pac_show_product_categories' ), 30 );
 				}
+
+			}
+
+			/**
+			 * Some plugins or themes may have already customized the hooks
+			 * We'll add body classes to the page and hide elements with CSS as a fall back
+			 *
+			 * @return $body_classes
+			 * @since 1.0.4
+			 * @see https://github.com/jameskoster/woocommerce-product-archive-customiser/issues/22
+			 */
+			function wc_pac_fire_customisation_styles( $body_classes ) {
+
+				$wc_pac_body_classes = array();
+
+				// Sale flash.
+				if ( get_theme_mod( 'wc_pac_sale_flash', false ) === false ) {
+					$wc_pac_body_classes[] = 'wc_pac_hide_sale_flash';
+				}
+
+				// Result Count.
+				if ( get_theme_mod( 'wc_pac_product_count', true ) === false ) {
+					$wc_pac_body_classes[] = 'wc_pac_hide_product_count';
+				}
+
+				// Product Ordering.
+				if ( get_theme_mod( 'wc_pac_product_sorting', true ) === false ) {
+					$wc_pac_body_classes[] = 'wc_pac_hide_product_sorting';
+				}
+
+				// Add to cart button.
+				if ( get_theme_mod( 'wc_pac_add_to_cart', true ) === false ) {
+					$wc_pac_body_classes[] = 'wc_pac_hide_add_to_cart';
+				}
+
+				// Thumbnail.
+				if ( get_theme_mod( 'wc_pac_thumbnail', true ) === false ) {
+					$wc_pac_body_classes[] = 'wc_pac_hide_thumbnail';
+				}
+
+				// Price.
+				if ( get_theme_mod( 'wc_pac_price', true ) === false ) {
+					$wc_pac_body_classes[] = 'wc_pac_hide_price';
+				}
+
+				// Rating.
+				if ( get_theme_mod( 'wc_pac_rating', true ) === false ) {
+					$wc_pac_body_classes[] = 'wc_pac_hide_rating';
+				}
+
+				// Add the body classes to the body
+				return array_merge( $body_classes, $wc_pac_body_classes );
 			}
 
 			/**
