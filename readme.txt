@@ -2,8 +2,8 @@
 Contributors: jameskoster
 Tags: woocommerce, ecommerce, products
 Requires at least: 4.4
-Tested up to: 4.6.1
-Stable tag: 1.0.4
+Tested up to: 4.7.3
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,9 @@ function remove_pac_styles() {
 2. An example product archive with everything enabled.
 
 == Changelog ==
+
+= 1.0.5 - 08/11/2017 =
+* Tweak - WooCommerce 2.7 compatibility.
 
 = 1.0.4 - 08/11/2016 =
 * Tweak - Added a css fallback to hide elements in themes that use priorities that are different to WooCommerce core when hooking in related functions.

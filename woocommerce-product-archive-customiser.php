@@ -2,10 +2,10 @@
 /**
  * Plugin Name: WooCommerce Product Archive Customiser
  * Plugin URI: https://wordpress.org/plugins/woocommerce-product-archive-customiser/
- * Version: 1.0.4
+ * Version: 1.0.5
  * Description: Allows you to customise WooCommerce product archives. Change the number of product columns and the number of products displayed per page. Toggle the display of core elements and enable some that are not included in WooCommerce core such as stock levels and product categories.
  * Author: jameskoster
- * Tested up to: 4.6.1
+ * Tested up to: 4.7.3
  * Author URI: http://jameskoster.co.uk
  * Text Domain: woocommerce-product-archive-customiser
  * Domain Path: /languages/
@@ -48,7 +48,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * The constructor!
 			 */
 			public function __construct() {
-				$this->version = '1.0.4';
+				$this->version = '1.0.5';
 
 				add_action( 'wp_enqueue_scripts', array( $this, 'wc_pac_styles' ) );
 				add_action( 'init', array( $this, 'wc_pac_setup' ) );
@@ -703,9 +703,13 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 */
 			function woocommerce_pac_show_product_stock() {
 				global $product;
-				$stock                = $product->get_total_stock();
+				$stock                = $product->get_stock_quantity();
 				$product_availability = $product->get_availability();
-				$availability_text    = $product_availability['availability'];
+				if ( $product_availability ) {
+					$availability_text    = $product_availability['availability'];
+				} else {
+					$availability_text    = '';
+				}
 
 				if ( $product->is_in_stock() ) {
 					echo '<p class="stock in-stock"><small>' . esc_attr( $availability_text ) . '</small></p>';
